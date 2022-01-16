@@ -31,7 +31,7 @@ const plantilla = (nombre, viewers, title, photo, youtubeLink, youtubeChannel) =
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
-                <p> <span class='text-blue-700 font-semibold font-mono'>${viewers}</span> Viewers</p>
+                <p> <span class='text-slate-700 font-semibold font-mono'>${viewers}</span> Viewers</p>
             </div>
             <div class="flex items-center text-sm text-gray-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,7 @@ const plantillaTalent = (name, subscribers, photo) => `<div class="flex flex-col
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
-        <p class='text-blue-600 font-mono font-semibold'>${subscribers}</p> 
+        <p class='text-slate-700 font-mono font-semibold'>${subscribers}</p> 
     </div>
     <p class="text-xs -translate-y-1">Subscribers</p>
 </div>
