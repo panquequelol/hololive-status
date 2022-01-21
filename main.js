@@ -30,10 +30,10 @@ const liveFormat = (
 ) => {
 	return `<div class="bg-gray-200 mx-2 my-2 border shadow-md rounded flex flex-row min-w-fit">
         <a class="hover:mouse-pointer shrink-0" href='${youtubeLink}' target='_blank'>
-            <img class="rounded-l h-24 w-32 hover:opacity-70" src="${photo}" alt="vtuber's channel">
+            <img class="rounded-l max-h-32 md:max-h-44 hover:opacity-70" src="${photo}" alt="vtuber's channel">
         </a>
         <div class="my-1 mx-2 text-xs sm:text-sm md:text-lg">
-            <a href='${youtubeLink}' target='_blank'><h2 class='tracking-tight hover:text-blue-600 hover:underline hover:decoration-blue-500'>${title}</h2></a>
+            <a href='${youtubeLink}' target='_blank'><h2 class='tracking-tight md:text-xl hover:text-blue-600 hover:underline hover:decoration-blue-500'>${title}</h2></a>
             <div class="flex items-center text-gray-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
