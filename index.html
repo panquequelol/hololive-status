@@ -162,52 +162,6 @@
 							/>
 						</svg>
 					</div>
-
-					<div
-						class="hidden bg-blue-300 text-blue-600 md:text-xl rounded lg:h-32 md:max-h-44 max-h-32 lg:h-32 lg:w-44 hover:underline hover:decoration-blue-500 hover:opacity-70 hover:text-blue-600 bg-gray-200 mx-2 my-2 border shadow-md rounded flex flex-row overflow-hiddden text-ellipsis truncate sm:text-xs sm:text-red-500 text-sm text-xs md:text-lg"
-					>
-						<img class="rounded-l h-24 w-24" src="${photo}" alt="vtuber's channel" />
-						<div class="my-1 mx-2 block shrink-0">
-							<p class="text-sm">${nombre}</p>
-							<div class="flex items-center text-sm text-gray-600">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-4 w-4"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-									/>
-								</svg>
-								<p><span class="text-blue-700 font-bold">${viewers}</span> Viewers</p>
-							</div>
-							<div class="flex items-center text-sm text-gray-600">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									class="h-4 w-4"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-									/>
-								</svg>
-								<p>
-									<span class="text-blue-800 font-semibold">${subscribers}</span>
-									Subscribers
-								</p>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -229,7 +183,10 @@
 				<div
 					id="videos"
 					class="grid grid-cols-2 lg:grid-cols-3 md:max-w-5xl md:mx-auto"
-				></div>
+				>
+					<!--* cargar clases -->
+					<div class="hidden hover:ring-blue-500 hover:ring-4"></div>
+				</div>
 				<div id="loading-spin" class="flex justify-center flex-auto m-4">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

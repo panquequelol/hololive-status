@@ -30,7 +30,7 @@ const liveFormat = (
 ) => {
 	return `<div class="bg-gray-200 mx-2 my-2 border shadow-md rounded flex flex-row min-w-fit">
         <a class="hover:mouse-pointer shrink-0" href='${youtubeLink}' target='_blank'>
-            <img class="rounded-l max-h-32 md:max-h-44 hover:opacity-70" src="${photo}" alt="vtuber's channel">
+            <img class="rounded-l max-h-24 md:max-h-44 hover:opacity-70" src="${photo}" alt="vtuber's channel">
         </a>
         <div class="my-1 mx-2 text-xs sm:text-sm md:text-lg">
             <a href='${youtubeLink}' target='_blank'><h2 class='tracking-tight md:text-xl hover:text-blue-600 hover:underline hover:decoration-blue-500'>${title}</h2></a>
@@ -90,7 +90,6 @@ const videosFormat = (
 		</div>
 	</div>`;
 
-
 let videosDOM = document.getElementById('videos');
 let liveDOM = document.getElementById('live-vtubers');
 let statsDOM = document.getElementById('stats');
@@ -142,25 +141,12 @@ const videos = async () => {
 	return data;
 };
 
-// videos().then((value) => {
-// 	value.videos.forEach((video) => {
-
-// 		if (video.is_uploaded || (video.is_uploaded == false && video.live_end !== null)) {
-// 			const { title, yt_video_key: youtubeID, channel } = video;
-// 			const thumbnail = `https://img.youtube.com/vi/${youtubeID}/hqdefault.jpg`;
-// 			const youtubeVideo = `https://www.youtube.com/watch?v=${youtubeID}`;
-
-// 			videosDOM.innerHTML += videosFormat(
-// 				channel.name,
-// 				title,
-// 				thumbnail,
-// 				youtubeVideo
-// 			)};
-// })
-
-videos().then(value=>{
-	value.videos.forEach(video=>{
-		if (video.is_uploaded || (video.is_uploaded == false && video.live_end !== null)){
+videos().then((value) => {
+	value.videos.forEach((video) => {
+		if (
+			video.is_uploaded ||
+			(video.is_uploaded == false && video.live_end !== null)
+		) {
 			const { title, yt_video_key: youtubeID, channel } = video;
 			const thumbnail = `https://img.youtube.com/vi/${youtubeID}/hqdefault.jpg`;
 			const youtubeVideo = `https://www.youtube.com/watch?v=${youtubeID}`;
@@ -170,10 +156,10 @@ videos().then(value=>{
 				title,
 				thumbnail,
 				youtubeVideo
-			)
+			);
 		}
-	})
-})
+	});
+});
 
 const channels = async () => {
 	const URL = 'https://api.holotools.app/v1/channels/';
